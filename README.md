@@ -1,10 +1,12 @@
-# WEB system
+# Daily Cat Facts
 - [ ] Replace "WEB system" with your system name
 
 ## Description
 - [ ] Provide WEB system description in few sentences - its purpose, users, etc.
-
+    The system will provide you with daily cat facts and let you add your own cat facts.
 ## Entity definition
+catFact: id(number(length=10000)), date_created(date), fact(string), added_by(string), votes(number(length>0))
+
 - [ ] Define the entity ("object" that will be manipulated) of WEB system
 - [ ] Entity should have a name
 - [ ] Entity should have 3 mandatory attributes:
@@ -16,6 +18,13 @@
     - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
 
 ## API definition
+Get some facts: GET /facts/random
+Get fact by its ID: GET /facts/:factID
+Get queued facts: GET /facts
+Vote up: POST /facts/:factID/vote
+404 - {error: 'page not found'}
+500 - {error: 'server error'}
+
 - [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
 - [ ] Optionally define additional API methods that WEB system is going to expose
 - [ ] API should have at least 4 methods
@@ -33,6 +42,7 @@
 - [ ] Should return all 5xx errors in unified format. Define format using `joi` language
 
 ## UI definition
+https://wireframe.cc/KUTnNJ
 - [ ] Define the structure of how visually the WEB system is going to look like
 - [ ] Should have at least one view defined with https://wireframe.cc (or other wireframe tool):
 - [ ] The view should have a title
