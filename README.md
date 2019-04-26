@@ -3,6 +3,7 @@
 
 ## Description
 - [ ] Provide WEB system description in few sentences - its purpose, users, etc.
+
     The system will provide you with daily cat facts and let you add your own cat facts.
 ## Entity definition
 catFact: id(number(length=10000)), date_created(date), fact(string), added_by(string), votes(number(length>0))
@@ -43,6 +44,7 @@ Vote up: POST /facts/:factID/vote
 
 ## UI definition
 https://wireframe.cc/KUTnNJ
+
 - [ ] Define the structure of how visually the WEB system is going to look like
 - [ ] Should have at least one view defined with https://wireframe.cc (or other wireframe tool):
 - [ ] The view should have a title
