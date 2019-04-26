@@ -21,7 +21,7 @@ catFact: id(number(length=10000)), date_created(date), fact(string), added_by(st
 ## API definition
 Get some facts: GET /facts/random
 
-Get fact by its ID: GET /facts/:factID
+Get fact by its ID: GET /facts/:factID 400 - {error : 'invalid ID}
 
 Get queued facts: GET /facts
 
